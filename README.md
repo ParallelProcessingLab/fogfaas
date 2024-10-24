@@ -1,2 +1,2 @@
-# ifogsim-faas
+# FoGFaaS
 Add serverless computing (faas) to ifogsim
