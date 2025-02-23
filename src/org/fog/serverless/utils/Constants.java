@@ -128,7 +128,7 @@ public class Constants {
      * Name of the file containing function requests list.
      */
 
-    public static final String FUNCTION_REQUESTS_FILENAME = "src/org/fog/serverless/Real_trace_test2_small.csv";
+    public static final String FUNCTION_REQUESTS_FILENAME = "src/org/fog/serverless/examples//Real_trace_test2_small.csv";
 
     /**
      * Algorithm specific parameters
