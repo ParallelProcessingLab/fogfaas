@@ -177,7 +177,8 @@ public class DCNS_FogFaaS {
 
 		FogFaaSApplication application = FogFaaSApplication.createApplication(appId, userId);
 		/*
-		 * Adding modules (vertices) to the application model (directed graph)
+		 * Adding modules (vertices) to the application model (directed graph).
+		 * For adding new module please read main article.
 		 */
 		application.addAppModule("object_detector", 10);
 		application.addAppModule("motion_detector", 10);
