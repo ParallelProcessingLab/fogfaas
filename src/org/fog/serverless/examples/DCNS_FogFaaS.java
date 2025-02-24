@@ -120,30 +120,16 @@ public class DCNS_FogFaaS {
 			createFogDevices(broker.getId(), appId);
 
 			controller = new FogFaaSController("master-controller", fogDevices, sensors, actuators);
-			// controller.submitFogList(fogList);
+
 			controller.submitApplication(application,
 					(CLOUD) ? (new FogFaaSModulePlacementMapping(fogDevices, application, moduleMapping))
 							: (new FogFaaSModulePlacementMobileEdgewards(fogDevices, sensors, actuators, application,
 									moduleMapping)));
 			createRequests();
-			// DC = createDatacenter("datacenter");
-
-			// controller.setFogFaaSDatacenter(DC);
 
 			CloudSim.terminateSimulation(2500.00);
 			CloudSim.startSimulation();
 			CloudSim.stopSimulation();
-			// List<ContainerCloudlet> finishedRequests =
-			// controller.getCloudletReceivedList();
-			// List<FogFaaSContainer> destroyedContainers =
-			// controller.getContainersDestroyedList();
-			// printRequestList(finishedRequests);
-			// printContainerList(destroyedContainers);
-			// if (Constants.MONITORING){
-			// printVmUpDownTime();
-			// printVmUtilization();
-			// }
-			// writeDataLineByLine(finishedRequests);
 			Log.printLine("DCNS FaaS version finished!");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -223,20 +209,6 @@ public class DCNS_FogFaaS {
 		 * application modules.
 		 */
 		application.addTupleMapping("motion_detector", "CAMERA", "MOTION_VIDEO_STREAM", new FractionalSelectivity(1.0)); // 1.0
-																															// tuples
-																															// of
-																															// type
-																															// MOTION_VIDEO_STREAM
-																															// are
-																															// emitted
-																															// by
-																															// Motion
-																															// Detector
-																															// module
-																															// per
-																															// incoming
-																															// tuple
-																															// of
 																															// type
 																															// CAMERA
 		application.addTupleMapping("object_detector", "MOTION_VIDEO_STREAM", "OBJECT_LOCATION",
@@ -272,7 +244,6 @@ public class DCNS_FogFaaS {
 		};
 
 		application.setLoops(loops);
-		System.out.println(application + "Application");
 		return application;
 	}
 
