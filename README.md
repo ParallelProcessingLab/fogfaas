@@ -48,21 +48,42 @@ These instructions will guide you on how to set up and run the simulations in th
 ```
 Import into Eclipse: Import the project into your Eclipse IDE as an existing Java project.
 
-Running the Simulations
+## Running the Simulations
 
 Navigate to the Source Code: In Eclipse, navigate to the src/org/fog/serverless/examples directory in the Project Explorer.
 Run the Simulation: Right-click on either DCNS_FogFaaS.java or VRGame_FogFaaS.java and select "Run As" -> "Java Application".
 
 Refer to the comments within the Java code for specific instructions and configuration options for each simulation.
-Project Structure
+
+## Project Structure
 
 README.md: This file.
 src/main/java or src: Source code directory (Java). The core simulation logic is located within the src/org/fog/serverless/ package.
 
-Further Information:
+## Citation
+If you use this code, please cite the research paper:
+```
+@ARTICLE{Ghaseminya2025,
+  title    = "Fogfaas: providing serverless computing simulation for iFogSim
+              and edge cloud",
+  author   = "Ghaseminya, Mohammad Mahdi and Shahzadeh Fazeli, Seyed Abolfazl 
+              and Abouei, Jamshid and Abbasi, Elham",
+  journal  = "The Journal of Supercomputing",
+  volume   =  81,
+  number   =  5,
+  pages    = "666",
+  month    =  mar,
+  year     =  2025
+}
 
-iFogSim Official Documentation: https://github.com/Cloudslab/iFogSim
-FogFaaS Repository: https://github.com/ParallelProcessingLab/fogfaas
 
-Contact:
+```
+
+## Further Information:
+
+iFogSim Official Documentation: [https://github.com/Cloudslab/iFogSim](https://github.com/Cloudslab/iFogSim)
+
+FogFaaS Repository: [https://github.com/ParallelProcessingLab/fogfaas](https://github.com/ParallelProcessingLab/fogfaas)
+
+## Contact:
 Pull Request!
